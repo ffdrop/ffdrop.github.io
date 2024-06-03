@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event order</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .order-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .order-form h2 {
+            margin-bottom: 20px;
+        }
+        .back-arrow {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .back-arrow a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .back-arrow a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="order-form">
+            <div class="back-arrow">
+                <a href="javascript:history.back()">&larr; Back</a>
+            </div>
+            <h2>Event Order Form</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="eventType">Event Type</label>
+                    <select class="form-control" id="eventType" required>
+                        <option value="party">Party</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="engagement">Engagement</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" class="form-control" id="eventDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderDetails">Order Details</label>
+                    <textarea class="form-control" id="orderDetails" rows="4" placeholder="Enter your order details" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="eventText">Text for Event</label>
+                    <textarea class="form-control" id="eventText" rows="4" placeholder="Enter the text for the event" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
